@@ -1,0 +1,241 @@
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+ <link rel="stylesheet" href="stripeapiinterface.css">
+ <script src="stripeapiinterface.js"></script>
+
+<h2>Stripe API Interface</h2>
+
+<ul class="nav-tab-container">
+    <li id="tool-button" data-tab="tool" class="active">Tool</li>
+     <li data-tab="history" class="">Logs</li>
+</ul>
+
+
+
+<!-- Tool Tab -->
+<div id="tool-tab" class="tab-content active">
+
+  <div class="master_user_input_container">
+    <div id = "api_key_input_container" class="user_input_prompt_container">
+      <input id = "api_key_input" class="user_input_prompt" type="text" placeholder="Insert Test API Key">
+    </div>
+  </div>
+
+
+
+
+  <div class="selection-container">
+  <div id = "header_flex">
+    <h3 id="resource_header">Resource</h3 ><h3 id="action_header">Action</h3>
+  </div>
+   
+  <div class="selection-wrapper">
+
+
+
+    <select id= "api_object_selection">
+      <!-- Core Resources -->
+      <option value="balance">Balance</option>
+      <option value="balance_transactions">Balance Transactions</option>
+      <option value="charges">Charges</option>
+      <option value="customers">Customers</option>
+      <option value="disputes">Disputes</option>
+      <option value="events">Events</option>
+      <option value="files">Files</option>
+      <option value="file_links">File Links</option>
+      <option value="payment_intents">Payment Intents</option>
+      <option value="setup_intents">Setup Intents</option>
+      <option value="payouts">Payouts</option>
+      <option value="products">Products</option>
+      <option value="refunds">Refunds</option>
+      <option value="tokens">Tokens</option>
+
+      <!-- Payment Methods -->
+      <option value="payment_methods">Payment Methods</option>
+      <option value="bank_accounts">Bank Accounts</option>
+      <option value="cards">Cards</option>
+      <option value="sources">Sources</option>
+      
+      <!-- Checkout -->
+      <option value="checkout_sessions">Checkout Sessions</option>
+
+      <!-- Billing -->
+      <option value="coupons">Coupons</option>
+      <option value="credit_notes">Credit Notes</option>
+      <option value="customer_balance_transactions">Customer Balance Transactions</option>
+      <option value="customer_tax_ids">Customer Tax IDs</option>
+      <option value="discounts">Discounts</option>
+      <option value="invoices">Invoices</option>
+      <option value="invoice_items">Invoice Items</option>
+      <option value="subscription_products">Subscription Products</option>
+      <option value="plans">Plans</option>
+      <option value="subscriptions">Subscriptions</option>
+      <option value="subscription_items">Subscription Items</option>
+      <option value="tax_rates">Tax Rates</option>
+      <option value="usage_records">Usage Records</option>
+
+      <!-- Connect -->
+      <option value="account">Account</option>
+      <option value="account_links">Account Links</option>
+      <option value="application_fees">Application Fees</option>
+      <option value="application_fee_refunds">Application Fee Refunds</option>
+      <option value="capabilities">Capabilities</option>
+      <option value="country_specs">Country Specs</option>
+      <option value="external_accounts">External Accounts</option>
+      <option value="persons">Persons</option>
+      <option value="topups">Top Ups</option>
+      <option value="transfers">Transfers</option>
+      <option value="transfer_reversals">Transfer Reversals</option>
+      
+      <!-- Fraud -->
+      <option value="early_fraud_warnings">Early Fraud Warnings</option>
+      <option value="fraud_reviews">Fraud Reviews</option>
+      <option value="fraud_value_lists">Fraud Value Lists</option>
+      <option value="fraud_value_list_items">Fraud Value List Items</option>
+      
+      <!-- Issuing -->
+      <option value="issuing_authorizations">Issuing Authorizations</option>
+      <option value="issuing_cardholders">Issuing Cardholders</option>
+      <option value="issuing_cards">Issuing Cards</option>
+      <option value="issuing_disputes">Issuing Disputes</option>
+      <option value="issuing_transactions">Issuing Transactions</option>
+      
+      <!-- Terminal -->
+      <option value="terminal_connection_tokens">Terminal Connection Tokens</option>
+      <option value="terminal_locations">Terminal Locations</option>
+      <option value="terminal_readers">Terminal Readers</option>
+
+      <!-- Orders -->
+      <option value="orders">Orders</option>
+      <option value="order_returns">Order Returns</option>
+      <option value="skus">SKUs</option>
+      
+      <!-- Sigma -->
+      <option value="scheduled_queries">Scheduled Queries</option>
+      
+      <!-- Webhooks -->
+      <option value="webhook_endpoints">Webhook Endpoints</option>
+
+    </select>
+
+
+    <select id="api_method_selection">
+
+
+    </select>
+  </div>
+  <div id = "temp-wrapper">
+  
+  
+  <h3>Templates</h3>
+  <div class="selection-wrapper">
+
+
+
+    <select class="template_select">
+      <!-- Core Resources -->
+
+    </select>
+
+
+
+  </div>
+  </div>
+
+  
+
+
+  </div>
+
+  <div class="endpoint-header-container" id="endpoint-header-container">
+   <h3>Endpoint Parameters</h3>
+  </div>
+
+
+  <div class="endpoint-wrapper" id="endpoint-wrapper">
+
+    <div class="endpoint-container" id="endpoint-container">
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- text -->
+  <div id = "request_container" class = "request-container removed">
+      <div class="request-header">
+          <h3>Body</h3>
+      </div>
+      <textarea id="JSON_request" class="data-request" spellcheck="false"></textarea>
+      
+      
+  </div>
+  
+  <div class="doc_link_container">
+    <a id ="doc_link" href="#"></a>
+  </div>
+      
+      
+      <div id="upload-container">
+          <h3>Upload</h3>
+          <!--<label id="file-label" for="upload-photo">Choose File...</label>-->
+          <div class="upload-flex">
+          
+          
+          <label id = "upload-label-container">
+            Choose File
+            <input type="file" id="file-box" name="file" required />       
+          </label>
+          <span class="selected-file"></span>
+          </div>
+          
+      </div>
+
+  <div id="connect_auth_container">
+      <input type="checkbox" id="connect_auth" name="connect_auth"
+                 value="connect_auth">
+          <label for="connect_auth">Auth As</label>
+  </div>
+
+
+
+
+  <div id = "connect_container" class="master_user_input_container">
+    <div class="user_input_prompt_container">
+      <input id = "connect_input" class="user_input_prompt" type="text" placeholder="Connected Account ID">
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <div class="button-div">
+    <button id="calculateButton" class="button">Submit Request</button>
+  </div>
+
+  <div class="results-container" id = "results-container">
+    <div id='label-results'></div>
+    <pre id="upload-results"></pre>
+  </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<ul id="history-tab" class="tab-content">
+  
+</ul>
