@@ -2,6 +2,21 @@ body {
     font-family: 'Roboto';
 }
 
+#action_header {
+  float:right;
+  text-align: right;
+}
+
+#resource_header {
+  display: inline-block;  
+}
+
+#header_flex {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  
+}
 select {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
   border-style: none;
@@ -184,7 +199,7 @@ h3 {
 }
 
 .request-container.removed {
-  	display: none;
+    display: none;
 }
 
 .request-container .data-request {
@@ -560,4 +575,17 @@ button#calculateButton:active {
     border-radius: 5px;
 }
 
+.template_select {
 
+  
+}
+
+#temp-wrapper {
+  
+  display: none;
+}
+
+#temp-wrapper.visible {
+  display: block;
+  
+}
