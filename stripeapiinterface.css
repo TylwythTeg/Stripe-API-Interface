@@ -20,6 +20,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  flex-wrap: wrap;
   
 }
 select {
@@ -163,13 +164,6 @@ h3 {
   margin: 0 auto;
   margin-top: 20px;
 }
-
-.selection-wrapper {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-}
-
 
 .endpoint-header-container { 
   width: 100%;
@@ -606,6 +600,26 @@ button#calculateButton:active {
 
 
 
+.action, .resource {
+  display: flex;
+  flex-direction: column;
+}
+
+.action.wrapped #action_header {
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -632,9 +646,6 @@ button#calculateButton:active {
 
 
 @media screen and (max-width: 340px) {
-  #interface {
-    width:  100%;
-  }
   .template_select {
     width:  80%;
   }

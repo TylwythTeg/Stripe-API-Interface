@@ -28,104 +28,103 @@
 
     <div class="selection-container">
     <div id = "header_flex">
-      <h3 id="resource_header">Resource</h3 ><h3 id="action_header">Action</h3>
+      <div class="resource">
+        <h3 id="resource_header">Resource</h3 >
+        <select id= "api_object_selection">
+          <!-- Core Resources -->
+          <option value="balance">Balance</option>
+          <option value="balance_transactions">Balance Transactions</option>
+          <option value="charges">Charges</option>
+          <option value="customers">Customers</option>
+          <option value="disputes">Disputes</option>
+          <option value="events">Events</option>
+          <option value="files">Files</option>
+          <option value="file_links">File Links</option>
+          <option value="payment_intents">Payment Intents</option>
+          <option value="setup_intents">Setup Intents</option>
+          <option value="payouts">Payouts</option>
+          <option value="products">Products</option>
+          <option value="refunds">Refunds</option>
+          <option value="tokens">Tokens</option>
+
+          <!-- Payment Methods -->
+          <option value="payment_methods">Payment Methods</option>
+          <option value="bank_accounts">Bank Accounts</option>
+          <option value="cards">Cards</option>
+          <option value="sources">Sources</option>
+          
+          <!-- Checkout -->
+          <option value="checkout_sessions">Checkout Sessions</option>
+
+          <!-- Billing -->
+          <option value="coupons">Coupons</option>
+          <option value="credit_notes">Credit Notes</option>
+          <option value="customer_balance_transactions">Customer Balance Transactions</option>
+          <option value="customer_tax_ids">Customer Tax IDs</option>
+          <option value="discounts">Discounts</option>
+          <option value="invoices">Invoices</option>
+          <option value="invoice_items">Invoice Items</option>
+          <option value="subscription_products">Subscription Products</option>
+          <option value="plans">Plans</option>
+          <option value="subscriptions">Subscriptions</option>
+          <option value="subscription_items">Subscription Items</option>
+          <option value="tax_rates">Tax Rates</option>
+          <option value="usage_records">Usage Records</option>
+
+          <!-- Connect -->
+          <option value="account">Account</option>
+          <option value="account_links">Account Links</option>
+          <option value="application_fees">Application Fees</option>
+          <option value="application_fee_refunds">Application Fee Refunds</option>
+          <option value="capabilities">Capabilities</option>
+          <option value="country_specs">Country Specs</option>
+          <option value="external_accounts">External Accounts</option>
+          <option value="persons">Persons</option>
+          <option value="topups">Top Ups</option>
+          <option value="transfers">Transfers</option>
+          <option value="transfer_reversals">Transfer Reversals</option>
+          
+          <!-- Fraud -->
+          <option value="early_fraud_warnings">Early Fraud Warnings</option>
+          <option value="fraud_reviews">Fraud Reviews</option>
+          <option value="fraud_value_lists">Fraud Value Lists</option>
+          <option value="fraud_value_list_items">Fraud Value List Items</option>
+          
+          <!-- Issuing -->
+          <option value="issuing_authorizations">Issuing Authorizations</option>
+          <option value="issuing_cardholders">Issuing Cardholders</option>
+          <option value="issuing_cards">Issuing Cards</option>
+          <option value="issuing_disputes">Issuing Disputes</option>
+          <option value="issuing_transactions">Issuing Transactions</option>
+          
+          <!-- Terminal -->
+          <option value="terminal_connection_tokens">Terminal Connection Tokens</option>
+          <option value="terminal_locations">Terminal Locations</option>
+          <option value="terminal_readers">Terminal Readers</option>
+
+          <!-- Orders -->
+          <option value="orders">Orders</option>
+          <option value="order_returns">Order Returns</option>
+          <option value="skus">SKUs</option>
+          
+          <!-- Sigma -->
+          <option value="scheduled_queries">Scheduled Queries</option>
+          
+          <!-- Webhooks -->
+          <option value="webhook_endpoints">Webhook Endpoints</option>
+
+        </select>
+      </div>
+
+      <div class="action">
+        <h3 id="action_header">Action</h3>
+        <select id="api_method_selection"></select>
+      </div>
+
+
+      
     </div>
-     
-    <div class="selection-wrapper">
 
-
-
-      <select id= "api_object_selection">
-        <!-- Core Resources -->
-        <option value="balance">Balance</option>
-        <option value="balance_transactions">Balance Transactions</option>
-        <option value="charges">Charges</option>
-        <option value="customers">Customers</option>
-        <option value="disputes">Disputes</option>
-        <option value="events">Events</option>
-        <option value="files">Files</option>
-        <option value="file_links">File Links</option>
-        <option value="payment_intents">Payment Intents</option>
-        <option value="setup_intents">Setup Intents</option>
-        <option value="payouts">Payouts</option>
-        <option value="products">Products</option>
-        <option value="refunds">Refunds</option>
-        <option value="tokens">Tokens</option>
-
-        <!-- Payment Methods -->
-        <option value="payment_methods">Payment Methods</option>
-        <option value="bank_accounts">Bank Accounts</option>
-        <option value="cards">Cards</option>
-        <option value="sources">Sources</option>
-        
-        <!-- Checkout -->
-        <option value="checkout_sessions">Checkout Sessions</option>
-
-        <!-- Billing -->
-        <option value="coupons">Coupons</option>
-        <option value="credit_notes">Credit Notes</option>
-        <option value="customer_balance_transactions">Customer Balance Transactions</option>
-        <option value="customer_tax_ids">Customer Tax IDs</option>
-        <option value="discounts">Discounts</option>
-        <option value="invoices">Invoices</option>
-        <option value="invoice_items">Invoice Items</option>
-        <option value="subscription_products">Subscription Products</option>
-        <option value="plans">Plans</option>
-        <option value="subscriptions">Subscriptions</option>
-        <option value="subscription_items">Subscription Items</option>
-        <option value="tax_rates">Tax Rates</option>
-        <option value="usage_records">Usage Records</option>
-
-        <!-- Connect -->
-        <option value="account">Account</option>
-        <option value="account_links">Account Links</option>
-        <option value="application_fees">Application Fees</option>
-        <option value="application_fee_refunds">Application Fee Refunds</option>
-        <option value="capabilities">Capabilities</option>
-        <option value="country_specs">Country Specs</option>
-        <option value="external_accounts">External Accounts</option>
-        <option value="persons">Persons</option>
-        <option value="topups">Top Ups</option>
-        <option value="transfers">Transfers</option>
-        <option value="transfer_reversals">Transfer Reversals</option>
-        
-        <!-- Fraud -->
-        <option value="early_fraud_warnings">Early Fraud Warnings</option>
-        <option value="fraud_reviews">Fraud Reviews</option>
-        <option value="fraud_value_lists">Fraud Value Lists</option>
-        <option value="fraud_value_list_items">Fraud Value List Items</option>
-        
-        <!-- Issuing -->
-        <option value="issuing_authorizations">Issuing Authorizations</option>
-        <option value="issuing_cardholders">Issuing Cardholders</option>
-        <option value="issuing_cards">Issuing Cards</option>
-        <option value="issuing_disputes">Issuing Disputes</option>
-        <option value="issuing_transactions">Issuing Transactions</option>
-        
-        <!-- Terminal -->
-        <option value="terminal_connection_tokens">Terminal Connection Tokens</option>
-        <option value="terminal_locations">Terminal Locations</option>
-        <option value="terminal_readers">Terminal Readers</option>
-
-        <!-- Orders -->
-        <option value="orders">Orders</option>
-        <option value="order_returns">Order Returns</option>
-        <option value="skus">SKUs</option>
-        
-        <!-- Sigma -->
-        <option value="scheduled_queries">Scheduled Queries</option>
-        
-        <!-- Webhooks -->
-        <option value="webhook_endpoints">Webhook Endpoints</option>
-
-      </select>
-
-
-      <select id="api_method_selection">
-
-
-      </select>
-    </div>
     <div id = "temp-wrapper">
     
     
