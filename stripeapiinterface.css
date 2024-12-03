@@ -2,6 +2,11 @@ body {
     font-family: 'Roboto';
 }
 
+#interface {
+  width:  500px;
+  margin:  0 auto;
+}
+
 #action_header {
   float:right;
   text-align: right;
@@ -45,7 +50,7 @@ a:hover {
 
 .doc_link_container {
   text-align: center;
-  width: 500px;
+  width: 100%;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -54,6 +59,7 @@ a:hover {
  font-size: 15px;
  color: #5399af;
  opacity: 0.9;
+ word-wrap: break-word;
 }
 
 .doc_link_container a:visited {
@@ -61,14 +67,14 @@ a:hover {
 }
 
 .master_user_input_container {
-  width: 500px;
+  width: 100%;
   margin: 0 auto;
   margin-top: 20px;
 }
 
 .user_input_prompt_container {
     margin: 0 auto;
-    width: 500px;
+    width: 100%;
     height: 40px;
     line-height: 32px;
     font-size: 32px;
@@ -96,7 +102,7 @@ a:hover {
 input.user_input_prompt {
     margin: 0 auto;
     padding-left: 10px;
-    width: 480px;
+    width: 96%;
     height: 100%;
     font-size: 18px;
     padding: 0 10px;
@@ -153,20 +159,20 @@ h3 {
 
 
 .selection-container {
-  width: 500px;
+  width: 100%;
   margin: 0 auto;
   margin-top: 20px;
 }
 
 .selection-wrapper {
   display: flex;
-  width: 500px;
+  width: 100%;
   justify-content: space-between;
 }
 
 
 .endpoint-header-container { 
-  width: 500px;
+  width: 100%;
   margin: 0 auto;
   display: none;
 }
@@ -176,14 +182,14 @@ h3 {
 }
 
 .endpoint-wrapper {
-  width: 500px;
+  width: 100%;
   margin: 0 auto;
   margin-top: 20px;
   overflow-x: visible;
 }
 
 .endpoint-container {
-  width: 500px;
+  width: 100%;
   height: 19px;
   display: block;
   display: flex;
@@ -193,7 +199,7 @@ h3 {
 }
 
 .request-container {
- width: 500px;
+ width: 100%;
  margin: 0 auto;
  margin-top: 20px;
 }
@@ -214,7 +220,7 @@ h3 {
 }
 
 #connect_auth_container {
-  width: 500px;
+  width: 100%;
   margin: 0 auto;
   margin-top: 20px;
   user-select:none;
@@ -234,7 +240,7 @@ h3 {
 
 /* Submit Button */
 .button-div {
-      width: 340px;
+      width: 68%
       margin: 0 auto;
       margin-top: 24px;
 }
@@ -249,7 +255,7 @@ button#calculateButton {
     font-size: 12px;
     outline: 0;
     display: block;
-    width: 140px;
+    width: 28%;
     margin: 0 auto;
     box-shadow: 0 0 2px 2px rgb(237, 237, 237);
     font-family: 'Roboto';
@@ -290,7 +296,7 @@ button#calculateButton:active {
 
 
 .results-container {
-    width: 480px;
+    width: 96%;
     margin: 0 auto;
     margin-top: 20px;
     display: none;
@@ -315,7 +321,7 @@ button#calculateButton:active {
 }
 
 .nav-tab-container {
-    width: 500px;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
     user-select:none;
@@ -360,7 +366,7 @@ button#calculateButton:active {
 
 .tab-content {
   display: none;
-  width: 500px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -388,7 +394,7 @@ button#calculateButton:active {
 
 
 #templates-tab {
-  width: 500px;
+  width: 100%;
   margin: 0 auto;
   margin-top: 20px;
 }
@@ -425,7 +431,7 @@ button#calculateButton:active {
 
 /* File Uploads */
 #upload-container {
-  width: 500px;
+  width: 100%;
   margin: 0 auto;
   display: none;
 }
@@ -589,3 +595,51 @@ button#calculateButton:active {
   display: block;
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 520px) {
+  #interface {
+    width:  100%;
+  }
+ }
+
+
+
+
+
+@media screen and (max-width: 340px) {
+  #interface {
+    width:  100%;
+  }
+  .template_select {
+    width:  80%;
+  }
+}
+
+
+
+
