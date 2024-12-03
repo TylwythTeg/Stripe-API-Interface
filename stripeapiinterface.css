@@ -521,6 +521,7 @@ button#calculateButton:active {
     /* text-align: left; */
     margin-bottom: 0;
     margin-top: 0;
+    word-wrap: break-word;
   
   
 }
