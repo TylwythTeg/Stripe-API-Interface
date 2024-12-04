@@ -576,8 +576,7 @@ button#calculateButton:active {
 }
 
 .template_select {
-
-  
+  max-width: 100%;
 }
 
 #temp-wrapper {
@@ -588,6 +587,11 @@ button#calculateButton:active {
 #temp-wrapper.visible {
   display: block;
   
+}
+
+#connect_input, .search_bar.object_id_input.user_input_prompt {
+  width: 100%;
+  padding: 0 10px;
 }
 
 
@@ -645,9 +649,9 @@ button#calculateButton:active {
 
 
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 488px) {
   .template_select {
-    width:  80%;
+    
   }
 }
 

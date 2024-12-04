@@ -884,22 +884,21 @@ function validTestKey(str) {
 
 
 
+    /* action drop down wrapping css update */
+    const resourceFlex = document.querySelector('#header_flex .resource');
+    const actionFlex = document.querySelector('#header_flex .action');
 
-const resourceFlex = document.querySelector('#header_flex .resource');
-const actionFlex = document.querySelector('#header_flex .action');
-
-function checkWrap() {
-    if (resourceFlex.offsetTop < actionFlex.offsetTop) {
-        //actionFlex has wrapped below so we need to update actionFlex css
-        actionFlex.classList.add("wrapped");
-    } else {
-        //undo
-        actionFlex.classList.remove("wrapped");
+    function checkWrap() {
+        if (resourceFlex.offsetTop < actionFlex.offsetTop) {
+            //actionFlex has wrapped below so we need to update actionFlex css
+            actionFlex.classList.add("wrapped");
+        } else {
+            //undo
+            actionFlex.classList.remove("wrapped");
+        }
     }
-}
 
-  window.addEventListener('resize', checkWrap);
-  checkWrap(); //need to run it on load in case it loads already wrapped
-
+    window.addEventListener('resize', checkWrap);
+    checkWrap(); //need to run it on load in case it loads already wrapped
 
 }

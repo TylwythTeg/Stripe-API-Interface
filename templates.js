@@ -21,7 +21,12 @@ export const templates = {
     charges: {
         "Standard Charge": {
             method: "create",
-            data: '{"amount":10000,"currency":"usd","source":"tok_visa"}'
+            data: `{
+                "amount": 10000,
+                "currency": "usd",
+                "source": "tok_visa"
+            }`
+            //data: '{"amount":10000,"currency":"usd","source":"tok_visa"}'
         },
         "Standard Charge (No Capture)": {
             method: "create",
