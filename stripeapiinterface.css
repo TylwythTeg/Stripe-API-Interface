@@ -459,8 +459,7 @@ button#calculateButton:active {
     display: inline-block;
     cursor: pointer;
     width: 110px;
-    background: url(https://upload.wikimedia.org/wikipedia/commons/f/f2/OOjs_UI_icon_upload-ltr.svg);
-    background: url(https://i.imgur.com/W8rJ1BS.png);
+    background: url("upload_file.png");
   background-repeat: no-repeat;
     background-position: 92% 49%;
     padding: 0 2px 0 17px;
