@@ -1,4 +1,4 @@
-export const apiResources = {
+export const API_RESOURCES = {
     balance: {
         retrieve: {
             name: "Retrieve",

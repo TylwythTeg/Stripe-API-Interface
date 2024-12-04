@@ -1,4 +1,4 @@
-export const templates = {
+export const TEMPLATES = {
 
         balance_transactions: {
         "List All Transactions": {
@@ -26,7 +26,6 @@ export const templates = {
                 "currency": "usd",
                 "source": "tok_visa"
             }`
-            //data: '{"amount":10000,"currency":"usd","source":"tok_visa"}'
         },
         "Standard Charge (No Capture)": {
             method: "create",
@@ -1247,8 +1246,19 @@ export const templates = {
             data: '{ "source": "tok_visa" , "email": "test@email.com","application_fee": 100 }',
         },
     },
+}
 
+TEMPLATES.searchByName = function searchTemplatesByName(name) {
+    const keys = Object.keys(TEMPLATES);
+    let val;
 
+    keys.forEach(key => {
+        const resource = TEMPLATES[key];
+        const templateNames = Object.keys(resource);
 
-
+        val = val || resource[templateNames.find(templateName => {
+            return templateName === name;
+        })];
+    });
+    return val;
 }
